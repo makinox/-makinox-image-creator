@@ -12,12 +12,8 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: build storybook
-        run: yarn build
-
       - name: build npm package
-        run: |
-          yarn build
+        run: yarn build
 
       - name: publish npm package
         if: contains(github.ref, 'main')

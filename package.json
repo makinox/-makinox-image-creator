@@ -1,17 +1,34 @@
 {
-  "name": "image-creator",
+  "name": "@makinox/image-creator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "start": "nodemon src/index.ts"
-  },
-  "keywords": [],
-  "author": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "author": "Jesus Bossa <x@jesusbossa.dev> (https://jesusbossa.dev/)",
+  "files": [
+    "dist/"
+  ],
   "license": "ISC",
+  "registry": "https://npm.pkg.github.com",
+  "repository": "git://github.com/makinox/makinox-image-creator",
+  "keywords": [
+    "images",
+    "creation",
+    "tool"
+  ],
+  "scripts": {
+    "start": "nodemon src/test.ts",
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "typescript": "^4.3.4"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@types/node": "^15.12.4",
     "nodemon": "^2.0.7",
+    "rollup": "^2.52.1",
+    "rollup-plugin-typescript2": "^0.30.0",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4"
   },

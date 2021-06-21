@@ -1,17 +1,35 @@
-import typescript from 'rollup-plugin-typescript2';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import dts from 'rollup-plugin-dts';
+import esbuild from 'rollup-plugin-esbuild';
 
-import packageJson from './package.json';
+const name = require('./package.json').main.replace(/\.js$/, '');
 
-const config = {
-  input: './src/index.ts',
+const bundle = (config) => ({
+  ...config,
+  input: 'src/index.ts',
+  external: (id) => !/^[./]/.test(id),
+});
 
-  output: [
-    { file: packageJson.main, name: '@makinox/image-creator', format: 'umd', sourcemap: true },
-    { file: packageJson.module, format: 'es', sourcemap: true },
-  ],
-  plugins: [typescript({ tsconfigOverride: { compilerOptions: { module: 'es2015' } } }), commonjs(), resolve({ browser: true })],
-};
-
-export default config;
+export default [
+  bundle({
+    plugins: [esbuild()],
+    output: [
+      {
+        file: `${name}.js`,
+        format: 'cjs',
+        sourcemap: true,
+      },
+      {
+        file: `${name}.mjs`,
+        format: 'es',
+        sourcemap: true,
+      },
+    ],
+  }),
+  bundle({
+    plugins: [dts()],
+    output: {
+      file: `${name}.d.ts`,
+      format: 'es',
+    },
+  }),
+];

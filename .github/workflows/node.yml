@@ -16,7 +16,7 @@ jobs:
         run: yarn build
 
       - name: publish npm package
-        if: contains(github.ref, 'main')
+        if: contains(github.ref, 'master')
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_KEY }}

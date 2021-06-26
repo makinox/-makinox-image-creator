@@ -20,7 +20,7 @@ CreateImage({ filePath: './test.png', extraLogo: './src/assets/B.svg' }).then((c
 
 ## Create image options
 
-#### width
+### width
 
 > Change canvas width
 
@@ -28,7 +28,7 @@ Type: `number`
 
 Default: `1200`
 
-#### height
+### height
 
 > Change canvas height
 
@@ -36,7 +36,7 @@ Type: `number`
 
 Default: `1200`
 
-#### backgroundColor
+### backgroundColor
 
 > Change canvas background color
 
@@ -44,7 +44,7 @@ Type: `string | CanvasGradient | CanvasPattern`
 
 Default: `#000`
 
-#### titleFontStyle
+### titleFontStyle
 
 > Change properties of the title
 
@@ -52,7 +52,7 @@ Type: `string`
 
 Default: `bold 70pt Open Sans`
 
-#### textAlign
+### textAlign
 
 > Change the alignment of the canvas texts
 
@@ -60,7 +60,7 @@ Type: `CanvasTextAlign`
 
 Default: `center`
 
-#### textTitle
+### textTitle
 
 > Change the title of the canvas
 
@@ -68,7 +68,7 @@ Type: `string`
 
 Default: `Hello, World!`
 
-#### titleFillStyle
+### titleFillStyle
 
 > Change color of the title background
 
@@ -76,7 +76,7 @@ Type: `string | CanvasGradient | CanvasPattern`
 
 Default: `#047788`
 
-#### titleColor
+### titleColor
 
 > Change color of the title
 
@@ -84,7 +84,7 @@ Type: `string | CanvasGradient | CanvasPattern`
 
 Default: `#fff`
 
-#### subTextColor
+### subTextColor
 
 > Change color of the sub text
 
@@ -92,7 +92,7 @@ Type: `string | CanvasGradient | CanvasPattern`
 
 Default: `#fff`
 
-#### subTextFontStyle
+### subTextFontStyle
 
 > Change properties of the sub text
 
@@ -100,7 +100,7 @@ Type: `string`
 
 Default: `bold 30pt Open sans`
 
-#### subText
+### subText
 
 > Change the sub text
 
@@ -108,13 +108,13 @@ Type: `string`
 
 Default: `image-creator.jesusbossa.dev`
 
-#### extraLogo
+### extraLogo
 
 > Set a logo
 
 Type: `string`
 
-#### filePath
+### filePath
 
 > Set the path of the created file
 

@@ -1,21 +1,6 @@
 import fs from 'fs';
 import { createCanvas, loadImage } from 'canvas';
-
-interface CreateImageProps {
-  width?: number;
-  height?: number;
-  backgroundColor?: string | CanvasGradient | CanvasPattern;
-  titleFontStyle?: string;
-  textAlign?: CanvasTextAlign;
-  textTitle?: string;
-  titleFillStyle?: string | CanvasGradient | CanvasPattern;
-  titleColor?: string | CanvasGradient | CanvasPattern;
-  subTextColor?: string | CanvasGradient | CanvasPattern;
-  subTextFontStyle?: string;
-  subText?: string;
-  extraLogo?: string;
-  filePath: string;
-}
+import { CreateImageProps } from './creation.type';
 
 function CreateImage({
   width = 1200,
